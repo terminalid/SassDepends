@@ -12,20 +12,19 @@
 }
 
 //Flex box specific Mixins:
-@mixin flexbox() {
+// For the container:
+//flowVals are Direction and Wrap
+@mixin flexbox($flowVals) {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-}
-
-@mixin flex($values) {
-  -webkit-box-flex: $values;
-  -moz-box-flex:  $values;
-  -webkit-flex:  $values;
-  -ms-flex:  $values;
-  flex:  $values;
+  @if $flowVals {
+      -webkit-flex-flow: $flowVals;
+      -moz-flex-flow: $flowVals;
+      flex-flow: $flowVals;
+  }
 }
 
 @mixin order($val) {
@@ -34,4 +33,14 @@
   -ms-flex-order: $val;
   -webkit-order: $val;
   order: $val;
+}
+
+//for child element:
+// flex: flex-grow flex-shrink flex-basis|auto|initial|inherit;
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
 }
