@@ -189,7 +189,7 @@ $palettes: (
 //  background: color('blue', 8);  // #1D3649      //
 //  background: color('blue');     // #4178BE      //
 /////////////////////////////////////////////////////
-@function color($color, $tone: 'core') {
+@function IBMcolor($color, $tone: 'core') {
   @if type-of($tone) == 'number' {
     @if $tone % 10 == $tone {
       $tone: $tone * 10;
