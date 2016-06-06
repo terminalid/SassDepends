@@ -12,3 +12,11 @@
   font-size: $fontSize;
   letter-spacing: $letterSpacing;
 }
+//new
+@mixin helvetN-Med($fontSize:inherit,$letterSpacing:normal) {
+  font-family: "Helvetica Neue for IBM","HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'Roboto', "Arial", sans-serif;
+  font-weight:500;
+  font-stretch:normal;
+  font-size: $fontSize;
+  letter-spacing: $letterSpacing;
+}
