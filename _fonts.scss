@@ -1,3 +1,30 @@
+//Generic Mixin, based on Font variables in Bootstrap
+@mixin font-Thin($fontSize:inherit,$letterSpacing:normal) {
+    font-family: $font-family-sans-serif;
+    font-weight:200;
+    font-stretch:normal;
+    font-size: $fontSize;
+    letter-spacing: $letterSpacing;
+}
+
+@mixin font-Light($fontSize:inherit,$letterSpacing:normal) {
+  font-family: $font-family-sans-serif;
+  font-weight:300;
+  font-stretch:normal;
+  font-size: $fontSize;
+  letter-spacing: $letterSpacing;
+}
+
+@mixin font-Med($fontSize:inherit,$letterSpacing:normal) {
+    font-family: $font-family-sans-serif;
+  font-weight:400;
+  font-stretch:normal;
+  font-size: $fontSize;
+  letter-spacing: $letterSpacing;
+}
+
+
+//Helvitica Neue Mixin - thin only works on mac
 @mixin helvetN-Light($fontSize:inherit,$letterSpacing:normal) {
   font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'Roboto', "Tahoma", "Geneva", "Arial", sans-serif;
   font-weight:300;
